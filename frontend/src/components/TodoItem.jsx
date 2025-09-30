@@ -41,7 +41,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
           />
         )}
       </div>
-      <div className="flex overflow-hidden items-center sm:gap-2">
+      <div className="flex overflow-hidden items-center gap-2">
         {editing ? (
           <>
             <button
