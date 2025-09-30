@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { MdDelete, MdOutlineEdit } from "react-icons/md";
+import { MdDelete, MdOutlineEdit, MdOutlineCancel } from "react-icons/md";
+import { FaSave } from "react-icons/fa";
 
 export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
   const [editing, setEditing] = useState(false);
@@ -47,7 +48,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
               className="px-2 py-1 bg-green-500 text-white rounded"
               onClick={save}
             >
-              Save
+              <FaSave />
             </button>
             <button
               className="px-2 py-1 bg-gray-300 rounded"
@@ -56,7 +57,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
                 setVal(todo.title);
               }}
             >
-              Cancel
+              <MdOutlineCancel />
             </button>
           </>
         ) : (

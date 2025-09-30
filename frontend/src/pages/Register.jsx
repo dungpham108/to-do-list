@@ -68,10 +68,7 @@ export default function Register() {
       });
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
-      toast.success("Registration successful!");
-      setTimeout(() => {
-        nav("/todos");
-      }, 1000);
+      nav("/todos");
     } catch (error) {
       toast.error(error.response?.data?.message || "An error occurred!");
     }

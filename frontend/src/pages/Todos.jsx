@@ -53,8 +53,8 @@ export default function Todos() {
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-6 font-poppins">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen p-2 sm:p-6 font-poppins overflow-hidden">
+      <div className="sm:max-w-4xl w-full mx-auto">
         <header className="flex justify-end items-center mb-6 gap-3">
           <h1 className="text-base sm:text-lg md:text-xl text-black text-center sm:text-left">
             Welcome,{" "}
@@ -77,7 +77,7 @@ export default function Todos() {
             </h1>
           </div>
 
-          <div className="mb-4 flex flex-row gap-3">
+          <div className="mb-4 flex sm:flex-row flex-col gap-3">
             <AddTodo onAdd={addTodo} />
             <div className="flex justify-center sm:justify-end">
               <select

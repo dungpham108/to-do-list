@@ -44,10 +44,7 @@ export default function Login() {
       const res = await API.post("/auth/login", { email, password });
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
-      toast.success("Login successful!");
-      setTimeout(() => {
-        nav("/todos");
-      }, 1000);
+      nav("/todos");
     } catch (error) {
       toast.error(error.response?.data?.message || "Login failed!");
     }
