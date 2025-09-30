@@ -35,13 +35,13 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
           </div>
         ) : (
           <input
-            className="p-1 mr-2 flex-1 border rounded"
+            className="p-1 sm:mr-2 sm:flex-1 w-full border rounded"
             value={val}
             onChange={(e) => setVal(e.target.value)}
           />
         )}
       </div>
-      <div className="flex overflow-hidden items-center gap-1 sm:gap-2">
+      <div className="flex overflow-hidden items-center sm:gap-2">
         {editing ? (
           <>
             <button
