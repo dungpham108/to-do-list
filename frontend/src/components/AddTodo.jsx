@@ -11,12 +11,12 @@ export default function AddTodo({ onAdd }) {
   return (
     <form onSubmit={handle} className="flex w-full gap-2">
       <input
-        className="flex-1 p-2 border focus:outline-none focus:ring-0 rounded"
+        className="flex-1 p-2 text-[14px] sm:text-base border focus:outline-none focus:ring-0 rounded"
         placeholder="Add task..."
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button className="px-4 py-2 bg-indigo-600 text-white rounded">
+      <button className="px-4 py-2 text-[14px] sm:text-base bg-indigo-600 text-white rounded">
         Add Task
       </button>
     </form>
