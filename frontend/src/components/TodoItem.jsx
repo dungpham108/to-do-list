@@ -12,8 +12,8 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
   };
 
   return (
-    <div className="bg-white rounded shadow p-3 flex items-center justify-between">
-      <div className="flex items-center gap-3">
+    <div className="bg-white rounded shadow p-3 flex items-center">
+      <div className="flex w-full flex-1 items-center sm:gap-3 gap-1">
         <input
           type="checkbox"
           checked={todo.completed}
@@ -35,23 +35,23 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }) {
           </div>
         ) : (
           <input
-            className="p-1 border rounded"
+            className="p-1 mr-2 flex-1 border rounded"
             value={val}
             onChange={(e) => setVal(e.target.value)}
           />
         )}
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex overflow-hidden items-center gap-1 sm:gap-2">
         {editing ? (
           <>
             <button
-              className="px-2 py-1 bg-green-500 text-white rounded"
+              className="px-2 py-2 bg-green-500 text-white rounded"
               onClick={save}
             >
               <FaSave />
             </button>
             <button
-              className="px-2 py-1 bg-gray-300 rounded"
+              className="px-2 py-2 bg-gray-300 rounded"
               onClick={() => {
                 setEditing(false);
                 setVal(todo.title);
